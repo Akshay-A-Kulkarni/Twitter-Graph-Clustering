@@ -201,6 +201,7 @@
 
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 @media (max-width: 900px) {
   html { font-size: 14px; }
@@ -262,16 +263,6 @@ body {
     font-size: 1rem;
 }
 
-/* img.grayscale {
-  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); 
-  filter: gray; 
-  -webkit-filter: grayscale(100%); 
-}
-
-img.grayscale:hover {
-  filter: none;
-  -webkit-filter: grayscale(0%);
-} */
 
 #brand_head {
     margin-top: 10%;
