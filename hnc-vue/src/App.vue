@@ -33,6 +33,7 @@
         <div class="hero-body">
             <div class="container has-text-centered">
                 <div class="columns" id='brand_head'>
+                    <br><br>
                     <div ref="logo_container" class="column is-6 is-offset-1">
                         <img class="float-content" src="./assets/tgraph.svg" alt="Logo" width="100%">
                     </div>
@@ -267,10 +268,10 @@ body {
 }
 
 #brand_head h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Roboto', sans-serif;
     font-size: 4.5rem;
     letter-spacing: 0.3px;
-    -webkit-text-stroke-width: 1.5px;
+    -webkit-text-stroke-width: 0.05px;
     -webkit-text-stroke-color: black;
      /* background: -webkit-linear-gradient(0deg,#1DA1F2,black);
     -webkit-background-clip: text;
