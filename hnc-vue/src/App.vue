@@ -203,12 +203,7 @@ html {
   font-size: 16px;
   scroll-behavior: smooth;
 }
-@media (max-width: 900px) {
-  html { font-size: 14px; }
-}
-@media (max-width: 400px) {
-  html { font-size: 12px; }
-}
+
 
 body {
     background-color: #F5F5F5;
