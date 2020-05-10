@@ -143,32 +143,32 @@
             <div class="container level">
                     <div class="level-item has-text-centered">
                       <div>
-                        <p class="title">3,456</p>
+                        <img class="title" src="./assets/python.svg" width="75px">
                         <br>
-                        <p class="heading">Tweets</p>
+                        <p class="heading" style="margin-top:10px;">Python</p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
                       <div>
-                        <p class="title">3,456</p>
+                        <img class="title" src="./assets/vue.svg" width="75px">
                         <br>
-                        <p class="heading">Tweets</p>
+                        <p class="heading" style="margin-top:10px;">Vue.js</p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
                       <div>
-                        <p class="title">3,456</p>
+                        <img class="title" src="./assets/bulma.svg" width="50px">
                         <br>
-                        <p class="heading">Tweets</p>
+                        <p class="heading" style="margin-top:10px;">Bulma</p>
                       </div>
                     </div>
-                    <div class="level-item has-text-centered">
+                    <!-- <div class="level-item has-text-centered">
                         <div>
-                           <p class="title">3,456</p>
+                        <img class="title" src="./assets/vue.svg" width="75px">
                         <br>
-                        <p class="heading">Tweets</p>
+                        <p class="heading" style="margin-top:10px;">Vue.js</p>
                         </div>
-                    </div>
+                    </div> -->
             </div>
         </footer>
         </div>
