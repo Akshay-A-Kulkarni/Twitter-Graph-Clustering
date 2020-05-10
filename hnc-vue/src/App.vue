@@ -267,6 +267,7 @@ body {
 }
 
 #brand_head h1 {
+    font-family: 'Montserrat', sans-serif;
     font-size: 4.5rem;
     letter-spacing: 0.3px;
     -webkit-text-stroke-width: 1.5px;
