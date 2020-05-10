@@ -6,7 +6,7 @@
                 <div class="container">
                     <div class="navbar-brand">
                         <a class="navbar-item" href="../">
-                            <img src="./assets/twitter-tile.svg" alt="Logo">
+                            <!-- <img src="./assets/twitter-tile.svg" alt="Logo"> -->
                         </a>
                         <span class="navbar-burger burger" data-target="navbarMenu">
                             <span></span>
@@ -19,10 +19,10 @@
                             <div class="tabs is-right">
                                 <ul>
                                     <li class="is-active"><a>Home</a></li>
-                                    <li><a href="">Examples</a></li>
-                                    <li><a href="">Features</a></li>
+                                    <li><a href="#intro">Prelude</a></li>
+                                    <li><a href="#alg">Algo</a></li>
                                     <li><a href="#arch">Schema</a></li>
-                                    <li><a href="">Help</a></li>
+                                    <li><a href="#CD">3D-Graph</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -34,9 +34,7 @@
             <div class="container has-text-centered">
                 <div class="columns" id='brand_head'>
                     <div ref="logo_container" class="column is-6 is-offset-1">
-                        <!-- <div id='logo_graph' ref="logo_graph"></div> -->
                         <img class="float-content" src="./assets/tgraph.svg" alt="Logo" width="100%">
-                        
                     </div>
                     <div class="column is-5 is-offset-0">
                         <h1 class="title is-2 has-text-left">
@@ -53,7 +51,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="section">
+                <div class="section" id="intro">
                     <div class="columns is-vcentered">
                     <div class="column is-half has-text-justified">
                         <div class="content tool-info">
@@ -77,7 +75,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="section has-text-left">
+            <div class="section has-text-left" id="alg">
                 <h2 class="subtitle is-3">Algorithms</h2>
                 <div class="columns tool-info is-vcentered">
                     <div class="column is-vcentered  content tool-info">
@@ -100,7 +98,7 @@
                 </div>
             </div>
             <br><br>
-            <div class="section has-text-left " id="arch">
+            <div class="section has-text-left" id="arch">
                 <div class="container tool-info">
                     <p class="subtitle is-3">Tool Architecture</p>
                         <div class="columns is-vcentered">
@@ -143,32 +141,32 @@
             <div class="container level">
                     <div class="level-item has-text-centered">
                       <div>
-                        <img class="title" src="./assets/python.svg" width="75px">
+                        <img class="grayscale" src="./assets/python.svg" width="75px">
                         <br>
                         <p class="heading" style="margin-top:10px;">Python</p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
                       <div>
-                        <img class="title" src="./assets/vue.svg" width="75px">
+                        <img class="grayscale" src="./assets/vue.svg" width="75px">
                         <br>
                         <p class="heading" style="margin-top:10px;">Vue.js</p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered">
                       <div>
-                        <img class="title" src="./assets/bulma.svg" width="50px">
+                        <img class="grayscale" src="./assets/bulma.svg" width="50px">
                         <br>
                         <p class="heading" style="margin-top:10px;">Bulma</p>
                       </div>
                     </div>
-                    <!-- <div class="level-item has-text-centered">
+                    <div class="level-item has-text-centered">
                         <div>
-                        <img class="title" src="./assets/vue.svg" width="75px">
+                        <img class="title" src="./assets/render.png" width="75px">
                         <br>
-                        <p class="heading" style="margin-top:10px;">Vue.js</p>
+                        <p class="heading" style="margin-top:10px;">Render</p>
                         </div>
-                    </div> -->
+                    </div>
             </div>
         </footer>
         </div>
@@ -197,13 +195,12 @@
 </script>
 
 <style>
-
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,700;1,400&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 html {
   font-size: 16px;
-  font-family: 'Open Sans', sans-serif;
 }
 @media (max-width: 900px) {
   html { font-size: 14px; }
@@ -214,7 +211,7 @@ html {
 
 body {
     background-color: #F5F5F5;
-    font-family: -apple-system,"BlinkMacSystemFont",'Roboto','Open Sans', sans-serif;
+    font-family: 'Roboto',-apple-system,"BlinkMacSystemFont",'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     }
@@ -265,7 +262,16 @@ body {
     font-size: 1rem;
 }
 
+/* img.grayscale {
+  filter: url("data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\'><filter id=\'grayscale\'><feColorMatrix type=\'matrix\' values=\'0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0\'/></filter></svg>#grayscale"); 
+  filter: gray; 
+  -webkit-filter: grayscale(100%); 
+}
 
+img.grayscale:hover {
+  filter: none;
+  -webkit-filter: grayscale(0%);
+} */
 
 #brand_head {
     margin-top: 10%;
@@ -276,6 +282,7 @@ body {
 
 #brand_head h1 {
     font-size: 4.5rem;
+    letter-spacing: 0.3px;
     -webkit-text-stroke-width: 1.5px;
     -webkit-text-stroke-color: black;
      /* background: -webkit-linear-gradient(0deg,#1DA1F2,black);
