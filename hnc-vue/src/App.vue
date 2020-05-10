@@ -259,9 +259,8 @@ body {
     font-size: 1rem;
 }
 
-
 #brand_head {
-    margin-top: 10%;
+    margin-top: 11%;
     font-weight: 300;
     break-inside: 1.25;
     /* font-size: 5rem; */
@@ -270,12 +269,9 @@ body {
 #brand_head h1 {
     font-family: 'Roboto', sans-serif;
     font-size: 4.5rem;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.5px;
     -webkit-text-stroke-width: 0.05px;
     -webkit-text-stroke-color: black;
-     /* background: -webkit-linear-gradient(0deg,#1DA1F2,black);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent; */
 }
 
 h1 span{
