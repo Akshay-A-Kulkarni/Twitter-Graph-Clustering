@@ -71,17 +71,16 @@
                                 </p>
                                 <div class="subtitle is-6">
                                     <p>
-                            Network graphs ubiquitous and have applications in various spaces such as computer science, social media analysis and even protein and drug interaction analyses. 
-                            The tool uses Graph networks built from scraped hashtags from live tweets with network clustering algorithms and NLP techniques to glean information about discussions surrounding COVID19. 
-                            <br><br>
-                            The tool uses two algorithms namely Clauset-Newman-Moore and Girvan-Newman to conduct the graph-based clustering yielding quite interesting results. Clusters consisting of labels thematically centered 
-                            around medical professionals and appreciation of medical professionals and many other covid related topics can be seen.
-                            <br><br>
-                            With more work, this can become an end-to-end tool to allow users or organizations to extract & analyze information from tweets to learn more about the zeitgeist around areas of their interest.
-
+                                        Network graphs are ubiquitous and have applications in various spaces such as computer science, social media analysis and even protein and drug interaction analyses. 
+                                        This tool uses such graph networks built from scraped hashtags from live tweets using Python and NetworkX along with network clustering algorithms and NLP techniques to glean information about discussions surrounding COVID19. 
+                                        <br><br>
+                                        The tool uses two algorithms namely Clauset-Newman-Moore and Girvan-Newman to conduct the graph-based clustering yielding quite interesting results. Clusters consisting of labels thematically centered 
+                                        around medical professionals and appreciation of medical professionals and many other covid related topics can be seen.
+                                        <br><br>
+                                        With more work, this can become an end-to-end tool to allow users or organizations to extract & analyze information from tweets to learn more about the zeitgeist around areas of their interest.
                                     </p>
                                     <!-- <ul>
-                                        <li>This tool with Python and NetworkX creates graph networks containing Hashtags as nodes which are linked based on co-occurrence of two such #s within a scraped tweet.</li>
+                                        <li>This tool  creates graph networks containing Hashtags as nodes which are linked based on co-occurrence of two such #s within a scraped tweet.</li>
                                         <br>
                                         <li>The tool scrapes aforementioned tweets containing the seed hashtag, using a Python package called Tweepy.</li>
                                         <br>
@@ -261,42 +260,42 @@
         <footer class="footer">
          <p class="subtitle is-6">Developed Using:</p>
             <div class="container level">
-                    <div class="level-item has-text-centered">
+                    <div class="level-item has-text-centered grow">
                       <div>
                         <img class="grayscale" src="./assets/python.svg" width="75px">
                         <br>
                         <p class="heading" style="margin-top:10px;">Python</p>
                       </div>
                     </div>
-                    <div class="level-item has-text-centered">
+                    <div class="level-item has-text-centered grow">
                       <div>
                         <img class="grayscale" src="./assets/js.png" width="75px">
                         <br>
                         <p class="heading" style="margin-top:10px;">JavaScript</p>
                       </div>
                     </div>
-                    <div class="level-item has-text-centered">
+                    <div class="level-item has-text-centered grow">
                       <div>
                         <img class="grayscale" src="./assets/vue.svg" width="75px">
                         <br>
                         <p class="heading" style="margin-top:10px;">Vue.js</p>
                       </div>
                     </div>
-                    <div class="level-item has-text-centered">
+                    <div class="level-item has-text-centered grow">
                       <div>
                         <img class="grayscale" src="./assets/bulma.svg" width="50px">
                         <br>
                         <p class="heading" style="margin-top:10px;">Bulma</p>
                       </div>
                     </div>
-                    <div class="level-item has-text-centered">
+                    <div class="level-item has-text-centered grow">
                         <div>
                         <img class="title" src="./assets/g-a.png" width="75px">
                         <br>
                         <p class="heading" style="margin-top:10px;">Github-Actions</p>
                         </div>
                     </div>
-                     <div class="level-item has-text-centered">
+                     <div class="level-item has-text-centered grow">
                         <div>
                         <img class="title" src="./assets/surge.svg" width="75px">
                         <br>

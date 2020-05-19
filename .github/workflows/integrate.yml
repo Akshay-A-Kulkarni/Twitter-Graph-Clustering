@@ -11,7 +11,6 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: 12
-      - run: sudo npm install -g @vue/cli
       - run: sudo npm install --global surge
       - run: sudo npm --prefix ./hnc-vue install
       - run: sudo npm --prefix ./hnc-vue run build
