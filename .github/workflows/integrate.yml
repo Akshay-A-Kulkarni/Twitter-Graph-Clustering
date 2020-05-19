@@ -13,5 +13,5 @@ jobs:
           node-version: 12
       - run: sudo npm install -g @vue/cli
       - run: sudo npm install --global surge
-      - run: sudo npm --prefix /hnc-vue run build
+      - run: sudo npm --prefix ./hnc-vue run build
       - run: surge ./hnc-vue/dist/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
