@@ -17,9 +17,3 @@ jobs:
       - run: npm run build
       - run: cd dist/
       - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
-
-
-
-
-
-🔥

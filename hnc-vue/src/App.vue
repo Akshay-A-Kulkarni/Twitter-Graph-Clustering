@@ -345,7 +345,6 @@ html {
 
 
 body {
-    color:#8e2d2d;
     background-color: #F5F5F5;
     font-family: BlinkMacSystemFont,-apple-system,'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
