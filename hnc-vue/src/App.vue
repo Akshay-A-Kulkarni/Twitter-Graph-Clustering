@@ -257,7 +257,7 @@
                     </div>
                     <div class="level-item has-text-centered">
                       <div>
-                        <img class="grayscale" src="./assets/js.svg" width="75px">
+                        <img class="grayscale" src="./assets/js.png" width="75px">
                         <br>
                         <p class="heading" style="margin-top:10px;">JavaScript</p>
                       </div>
@@ -371,7 +371,7 @@ body {
 }
 
 .card{
-    box-shadow: 0 2em 2em -0.125em rgba(29, 161, 242, 1);
+    box-shadow: 0 2em 2em -0.125em rgba(29, 161, 242, 0.2);
     /* outline: 1px solid #0198fa; */
     padding: 10px 10px;
     border: 1px solid transparent;
