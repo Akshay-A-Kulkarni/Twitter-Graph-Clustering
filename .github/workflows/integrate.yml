@@ -3,12 +3,13 @@ name: HCD Deployment
 on : [push]
 
 jobs:
-  surge_deploy:
+  build:
     runs-on: unbuntu-latest
+    name: Deploying to surge
     steps:
-      -uses: actions/checkout@v2
-      -uses: actions/setup-node@v1
-       with:
+      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+        with:
           node-version: 12
       - run: npm ci
       - run: npm install --global surge
@@ -21,3 +22,4 @@ jobs:
 
 
 
+🔥
