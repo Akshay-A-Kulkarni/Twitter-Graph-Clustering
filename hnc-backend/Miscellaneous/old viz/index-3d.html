@@ -1,0 +1,30 @@
+<head>
+    <style> body { margin: 0; } </style>
+  
+    <script src="https://unpkg.com/3d-force-graph@1.60.12/dist/3d-force-graph.min.js"></script>
+    <!--<script src="../../dist/3d-force-graph.js"></script>-->
+  </head>
+  
+  <body>
+  
+    <div id="3d-graph"></div>
+  
+    <script>
+      const elem = document.getElementById('3d-graph');
+
+      const Graph = ForceGraph3D()(elem)
+        .jsonUrl('https://raw.githubusercontent.com/Akshay-A-Kulkarni/Twitter-Network-Analysis/master/Miscellaneous/ClausetNewmanMoore.json')
+        .backgroundColor('white')
+        .nodeVal(node => node.Degree*node.Degree)
+        .nodeAutoColorBy('CNM_Label')
+        .nodeLabel(node =>  `${node.id}: ${node.hashtag_name}: ${node.CNM_Label}`)
+        .nodeOpacity(1)
+        .nodeResolution(30)
+        .linkColor(() => 'black')
+        .linkOpacity(0.2)
+        .linkWidth(1)
+        .onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
+        // .linkDirectionalParticles(1);
+        // .onNodeClick(node => window.open(`https://bl.ocks.org/${node.user}/${node.id}`, '_blank'));
+    </script>
+  </body>

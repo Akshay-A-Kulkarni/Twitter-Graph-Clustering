@@ -1,0 +1,60 @@
+<head>
+    <style> body { margin: 0; } </style>
+  
+    <script src="https://unpkg.com/force-graph@1.27.1/dist/force-graph.min.js"></script>
+    <script src="https://unpkg.com/dat.gui@0.7.7/build/dat.gui.js"></script>
+    <script src="https://unpkg.com/3d-force-graph@1.60.12/dist/3d-force-graph.min.js "></script>
+    <script src="https://unpkg.com/three@0.115.0/build/three.js"></script>
+
+    <!--<script src="../../dist/force-graph.js"></script>-->
+  </head>
+  
+  <body>
+    <div id="graph"></div>
+  
+    <script>
+    //   fetch('https://raw.githubusercontent.com/vasturiano/force-graph/master/example/datasets/blocks.json').then(res => res.json()).then(data => {
+        fetch('https://raw.githubusercontent.com/Akshay-A-Kulkarni/Twitter-Network-Analysis/master/Miscellaneous/ClausetNewmanMoore.json')
+        .then(res => res.json()).then(data => {
+
+        const elem = document.getElementById('graph');
+  
+        const Graph = ForceGraph()(elem)
+          .backgroundColor('#101020')
+          .nodeRelSize(6)
+          .nodeAutoColorBy('CNM_Label')
+          .nodeLabel(node => `${node.id}: ${node.hashtag_name}: ${node.CNM_Label}`)
+          .linkColor(() => 'rgba(255,255,255,0.09)')
+          .linkWidth(0.3)
+        //   .linkDirectionalParticles(1)s
+          .onNodeHover(node => elem.style.cursor = node ? 'pointer' : null)
+          .onNodeClick(node => window.open(``, '_blank'))
+          .graphData(data);
+        
+          const linkForce = Graph
+                            .d3Force('link')
+                            .distance(link => link.color ? settings.interCommunityDistance : settings.intraCommunityDistance);
+
+          //Define GUI
+          const Settings = function() {
+            this.interCommunityDistance = 0;
+            this.intraCommunityDistance = 2000;
+          };
+          
+          const settings = new Settings();
+          const gui = new dat.GUI();
+          
+          const controllerOne = gui.add(settings, 'interCommunityDistance', -100, 1000);
+          const controllerTwo = gui.add(settings, 'intraCommunityDistance',  -100, 1000);
+          
+          controllerOne.onChange(updateLinkDistance);
+          controllerTwo.onChange(updateLinkDistance);
+          
+          function updateLinkDistance() {
+            linkForce.distance(link => link.color ? settings.interCommunityDistance : settings.intraCommunityDistance);
+             Graph.numDimensions(2); // Re-heat simulation
+          }
+        
+        });
+    </script>
+  </body>

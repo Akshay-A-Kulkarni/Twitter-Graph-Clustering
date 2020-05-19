@@ -1,0 +1,56 @@
+<head>
+    <style> body { margin: 0; } </style>
+  
+    <script src="https://unpkg.com/force-graph@1.27.2/dist/force-graph.min.js"></script>
+  <!--  <script src="../../dist/force-graph.js"></script>-->
+  </head>
+  
+  <body>
+    <div id="graph"></div>
+  
+    <script>
+    // const imgs = ['brady-fab.gif']
+    //   .map(src => {
+    const img = new Image();
+    img.src = `./svg/twitter-official.svg`;
+    //     return img;
+    //   });
+      // Random tree
+      const N = 20;
+      const gData = {
+        nodes: [...Array(N).keys()].map(i => ({ id: i, img:img })),
+        links: [...Array(N).keys()]
+          .filter(id => id)
+          .map(id => ({
+            source: id,
+            target: Math.round(Math.random() * (id-1)),
+            dashed: (true)
+          }))
+      };
+  
+      const elem = document.getElementById('graph');
+  
+      const dashLen = 6;
+      const gapLen = 8;
+  
+      const Graph = ForceGraph()(elem)
+        .graphData(gData)
+        .nodeCanvasObject(({ img, x, y }, ctx) => {
+        const size = 20;
+        ctx.drawImage(img, x - size / 2, y - size / 2, size, size);})
+        // .nodeRelSize(8)
+        .linkWidth(3)
+        .linkLineDash(link => link.dashed && [dashLen, gapLen]);
+  
+      // Dash animation
+      const st = +new Date();
+      const dashAnimateTime = 300; // time to animate a single dash
+      (function animate() {
+        const t = ((+new Date() - st) % dashAnimateTime) / dashAnimateTime;
+        const lineDash = t < 0.5 ? [0, gapLen * t * 2, dashLen, gapLen * (1 - t * 2)] : [dashLen * (t - 0.5) * 2, gapLen, dashLen * (1 - (t - 0.5) * 2), 0];
+        Graph.linkLineDash(link => link.dashed && lineDash);
+  
+        requestAnimationFrame(animate);
+      })(); // IIFE
+    </script>
+  </body>

@@ -83,9 +83,9 @@ export function Render3DGraph(elem,l_width){
       .linkColor(link => link.color != 0 ? RainBowColor(link.color,43): 'rgb(169,169,169)')
       .linkOpacity(0.4)
       .linkWidth(2)
-      .warmupTicks(50)
+      // .warmupTicks(50)
       .cameraPosition({ z: 4500 })
       .linkResolution(6);
   
-  return graph
+      return graph
 }

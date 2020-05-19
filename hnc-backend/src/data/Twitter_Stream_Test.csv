@@ -1,0 +1,29 @@
+,date,id,text,hashtags,location,coords
+0,2020-03-30 18:03:25,1244686685457317889,At this week's VTH for #brookline businesses and nonprofits: Update and Q&amp;A w/ @RepJoeKennedy re: the recently enac… https://t.co/gkFwjDVZrw,"[{'text': 'brookline', 'indices': [23, 33]}]","Brookline, Massachusetts","{'type': 'Point', 'coordinates': [-71.1497304, 42.3373417]}"
+1,2020-03-30 18:03:54,1244686804550369283,"CAULIFLOWER 
+Hi everyone, how are you all doing! I did want to recommend one of the food you may want to consider s… https://t.co/PhV2VMa01N",[],"3rd Avenue Gwarinpa, Abuja","{'type': 'Point', 'coordinates': [7.4833, 9.0667]}"
+2,2020-03-30 18:04:32,1244686967503228931,"The help is finally here! 🎥 @SJBPS4 📸 @andygazio #nyclives .
+.
+, https://t.co/ykCCAxaikV 
+.
+#corona #coronavirus… https://t.co/bqPyFhmPKJ","[{'text': 'nyclives', 'indices': [49, 58]}, {'text': 'corona', 'indices': [92, 99]}, {'text': 'coronavirus', 'indices': [100, 112]}]","Hauppauge, NY","{'type': 'Point', 'coordinates': [-73.98609044, 40.75282556]}"
+3,2020-03-30 18:05:28,1244687201906163717,"""If you can work remotely,  you should do so,  and companies should allow that.""
+
+#StayAtHome #coronavirus #COVID19 #Virginia #VAgov #RVA","[{'text': 'StayAtHome', 'indices': [82, 93]}, {'text': 'coronavirus', 'indices': [94, 106]}, {'text': 'COVID19', 'indices': [107, 115]}, {'text': 'Virginia', 'indices': [116, 125]}, {'text': 'VAgov', 'indices': [126, 132]}, {'text': 'RVA', 'indices': [133, 137]}]",#RVA (ish),"{'type': 'Point', 'coordinates': [-77.47, 37.55]}"
+4,2020-03-30 18:06:12,1244687386778521605,"🇺🇸 US: (Part 2)
+
+Notes: Lock-downs in some States, Little PPE, Low Testing Rate, Chaotic, In Denial, Govt. Lying, S… https://t.co/hciYJWqTQy",[],UK,"{'type': 'Point', 'coordinates': [-95.7129, 37.0902]}"
+5,2020-03-30 18:06:30,1244687461843972101,"""Virginia now has &gt;1,000 cases... What we are seeing now is a result of what we've done 2 or 3 weeks ago.""… https://t.co/OXJfqkdEOK",[],#RVA (ish),"{'type': 'Point', 'coordinates': [-77.47, 37.55]}"
+6,2020-03-30 18:07:28,1244687705356763147,"🚘 Nates Car Sales 🚘
+
+Coronavirus Updates And Information ⚠️😷⚠️😷⚠️
+
+1326 Confirmed Cases In South Africa 
+🦠🧫🆘🦠
+
+With… https://t.co/zYfrTXoHgR",[],East London - Amalinda,"{'type': 'Point', 'coordinates': [27.8635755, -32.9911514]}"
+7,2020-03-30 18:11:37,1244688746798362624,"Day 11 of Self-isolation: should I play pie face by myself?
+
+#selfisolation #covid_19 #pieface #workingfromhome @ L… https://t.co/dH9OZs9vgT","[{'text': 'selfisolation', 'indices': [61, 75]}, {'text': 'covid_19', 'indices': [76, 85]}, {'text': 'pieface', 'indices': [86, 94]}, {'text': 'workingfromhome', 'indices': [95, 111]}]",Canada,"{'type': 'Point', 'coordinates': [-81.25, 42.9833]}"
+8,2020-03-30 18:13:12,1244689148872712192,New York Governor Andrew Cuomo’s leadership during this pandemic has been outstanding. nygovcuomo #GovernorCuomo… https://t.co/ZqLk085koJ,"[{'text': 'GovernorCuomo', 'indices': [98, 112]}]",,"{'type': 'Point', 'coordinates': [-74.0064, 40.7142]}"
+9,2020-03-30 18:14:08,1244689382940049420,My new #personaltrainer #lockdown #workout #covid_19 #home #gym @ Harlesden NW10 https://t.co/W0gotomXJ1,"[{'text': 'personaltrainer', 'indices': [7, 23]}, {'text': 'lockdown', 'indices': [24, 33]}, {'text': 'workout', 'indices': [34, 42]}, {'text': 'covid_19', 'indices': [43, 52]}, {'text': 'home', 'indices': [53, 58]}, {'text': 'gym', 'indices': [59, 63]}]","Harlesden, United Kingdom","{'type': 'Point', 'coordinates': [-0.246849, 51.536169]}"

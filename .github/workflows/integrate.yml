@@ -1,0 +1,23 @@
+name: HCD Deployment
+
+on : [push]
+
+jobs:
+  surge_deploy:
+    runs-on: unbuntu-latest
+    steps:
+      -uses: actions/checkout@v2
+      -uses: actions/setup-node@v1
+       with:
+          node-version: 12
+      - run: npm ci
+      - run: npm install --global surge
+      - run: cd hnc-vue/
+      - run: npm run build
+      - run: cd dist/
+      - run: surge ./ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+
+
+
+
+

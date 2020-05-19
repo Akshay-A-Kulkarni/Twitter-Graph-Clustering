@@ -54,6 +54,9 @@
                         </div>
                     </div>
                 </div>
+                <br>
+                <br>
+                <br>
                 <div class="section has-text-left" id="intro">
                     <div class="columns is-vcentered">
                     <div class="column is-half has-text-left">
@@ -126,9 +129,9 @@
                                 </p>
                                 <div class="subtitle is-6">
                                     <ul type="circle">
-                                        <li>Calculates the Betweeness-Centrality of all edges which is the measure of the extent to which a vertex lies on paths between other vertices. </li>
-                                        <li>The algorithm selectively removes edges with the highest score and Then recalculates and repeats until all communities have been detected.</li>
-                                        <li>Slower than CNM (approx 10-12 minutes; <code>TC: O(E^2N)</code>, but typically returns results with higher modularity scores (Modularity: 0.8035).</li>
+                                        <li>Calculates the Betweeness-Centrality of all edges which is the measure of no. of shortest paths passing through that vertex. </li>
+                                        <li>The algorithm selectively removes edges with the highest score and repeats until all communities have been detected.</li>
+                                        <li>Slower than CNM (<code>TC: O(E^2N)</code>, but typically returns results with higher modularity scores (Modularity: 0.8035).</li>
                                      </ul>
                                 </div>
                               </div>
@@ -185,9 +188,15 @@
                         <div class="container" ref="cd_graph"></div>
                     <!-- <div ref="controls"></div> -->
                     </div>
-                    <div class="column is-4 is-vcentered">
+                    <div class="column is-4 is-vcentered is-offset-2">
                         <div style="height:100%;">
                             <p>&nbsp;
+                                <br><br><br>
+                                <br><br><br>
+                                <br><br><br>
+                                <br><br><br>
+                                <br><br><br>
+                                <br><br><br>
                                 <br><br><br>
                                 <br><br><br>
                                 <br><br><br>
@@ -207,6 +216,24 @@
                                         <li> Node and edge Community membership is represented by colors  </li>
                                         <li> Additional information about the nodes can be accessed by hovering over nodes. </li>
                                     </ul>
+                                <div>
+                                    <p>Inter Community Distance</p>
+                                     <vue-slider 
+                                        v-model="interCommunityDistance"
+                                        @change="updateLinkForce()"
+                                        :min="0"
+                                        :max="5000"
+                                        :interval="1"/>
+                                     <br>
+                                     <p>Intra Community Distance</p>
+                                     <vue-slider 
+                                        v-model="intraCommunityDistance"
+                                        @change="updateLinkForce()"
+                                        :min="-200"
+                                        :max="1000"
+                                        :interval="1"/>
+                                </div>
+                                   
                                 </div>
                               </div>
                             </div>
@@ -266,24 +293,28 @@
 
 <script>
     import { ExampleGraph, Render3DGraph} from './graph-viz-driver.js';
+    import VueSlider from 'vue-slider-component'
+    import 'vue-slider-component/theme/antd.css'
 
     export default {
       name: 'App',
-      components: {},
+      components: {
+          VueSlider
+      },
       data: function () {
             return {
                 intraCommunityDistance : 150,
                 interCommunityDistance : 3000,
-                graph_obj:null
+                graph_obj : null,
+                linkForce : null
             }
         },
 
       methods:{
-          updateLinkForce: function(graph) {
-                return graph.d3Force('link')
-                                 .distance(link => link.color == 0 ? this.interCommunityDistance : this.intraCommunityDistance); 
-          }
-          
+          updateLinkForce: function() {
+                this.linkForce.distance(link => link.color == 0 ? this.interCommunityDistance : this.intraCommunityDistance)
+                this.graph_obj.numDimensions(3);
+          } 
       },
 
       mounted: function (){
@@ -295,30 +326,9 @@
         ExampleGraph(elem1,l_width);
         this.graph_obj = Render3DGraph(elem2,l_width2);
 
-        this.updateLinkForce(this.graph_obj);
-            
+        this.linkForce = this.graph_obj.d3Force('link')
+                                       .distance(link => link.color == 0 ? this.interCommunityDistance : this.intraCommunityDistance); 
 
-        // function updateLinkDistance() {
-        //    linkForce.distance(link => link.color == 0  ? this.interCommunityDistance : this.intraCommunityDistance);
-        //    graph.numDimensions(3); // Re-heat simulation
-        //  }
-        
-        // updateLinkDistance();
-         // Define GUI
-        //  const Settings = function() {
-        //    this.intraCommunityDistance = 150;
-        //    this.interCommunityDistance = 3000;
-        //  };  
-
-        //  const settings = new Settings();
-
-        //  const gui = new dat.GUI({ autoPlace: false } );  
-         // gui.domElement.id = cntrls;
-        //  const controllerOne = gui.add(settings, 'intraCommunityDistance', -100, 1000);
-        //  const controllerTwo = gui.add(settings, 'interCommunityDistance', -1000, 10000);  
-
-        //  controllerOne.onChange(updateLinkDistance);
-        //  controllerTwo.onChange(updateLinkDistance); 
         },
     }
 </script>
@@ -329,14 +339,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
 
 html {
-  font-size: 16px;
+  font-size: 17px;
   scroll-behavior: smooth;
 }
 
 
 body {
+    color:#8e2d2d;
     background-color: #F5F5F5;
-    font-family: 'Inter',-apple-system,"BlinkMacSystemFont",'Open Sans', sans-serif;
+    font-family: BlinkMacSystemFont,-apple-system,'Open Sans', sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale; 
     }
@@ -353,11 +364,22 @@ body {
     border-width: 0.5px;
 }
 
-.card-content{
-    border-color: #1DA1F2;
-    box-shadow: 0 2em 2em -0.125em rgba(29, 161, 242, 0.1);
+.card{
+    box-shadow: 0 2em 2em -0.125em rgba(29, 161, 242, 1);
+    /* outline: 1px solid #0198fa; */
+    padding: 10px 10px;
+    border: 1px solid transparent;
+    -webkit-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
     }
 
+.card:hover {
+  outline: 0px solid transparent;
+  padding: 10px 10px;
+  border: 1px solid #0198fa;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
+}
 
 @keyframes float {
 	0% {
@@ -378,7 +400,7 @@ body {
 .grow:hover { transform: scale(1.05); }
 
 .grow-lots { transition: all .2s ease-in-out; }
-.grow-lots:hover { transform: scale(1.2); }
+.grow-lots:hover { transform: scale(1.2);}
 
 .float-content{
     line-height: 1.25;
@@ -400,10 +422,11 @@ body {
 }
 
 #brand_head h1 {
-    font-family: 'Roboto', sans-serif;
+    font-family: -apple-system,system-ui,BlinkMacSystemFont,'Roboto', sans-serif;
+    font-weight: 600;
     font-size: 5rem;
     letter-spacing: 0.5px;
-    -webkit-text-stroke-width: 0.05px;
+    -webkit-text-stroke-width: 2.0px;
     -webkit-text-stroke-color: black;
 }
 

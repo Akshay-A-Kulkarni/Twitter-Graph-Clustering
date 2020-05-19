@@ -1,0 +1,31 @@
+<head>
+    <style> body { margin: 0; } </style>
+    <script src="https://unpkg.com/force-graph@1.27.1/dist/force-graph.min.js"></script>
+    <script src="https://unpkg.com/dat.gui@0.7.7/build/dat.gui.js"></script>
+    <script src="https://unpkg.com/3d-force-graph@1.60.12/dist/3d-force-graph.min.js "></script>
+    <script src="https://unpkg.com/three@0.115.0/build/three.js"></script>
+    <script src="https://unpkg.com/three-spritetext@1.5.1/dist/three-spritetext.min.js"></script>
+
+
+    <!-- <script src="../../dist/3d-force-graph.js"></script> -->
+  </head>
+  
+  <body style="background-color: #FFFFFF; color: black;">
+    <h1 id = "title" ></h1>
+    <div id="3d-graph"></div>
+  
+    <!-- Importing the graph JS code -->
+    <script src="3d-viz-driver.js"></script>
+    <script>
+        // var person = prompt("Please enter title for Visualisation", "3D-Graph");
+
+        if (person != null) {
+            document.getElementById("title").innerHTML =
+                person + " Interactive visualisation";
+        }
+        else{
+          document.getElementById("title").innerHTML =
+                "Community Detetction Interactive visualisation";
+        }       
+    </script>
+  </body>
