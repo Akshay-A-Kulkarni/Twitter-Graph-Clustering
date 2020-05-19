@@ -278,9 +278,16 @@
                     </div>
                     <div class="level-item has-text-centered">
                         <div>
-                        <img class="title" src="./assets/render.png" width="75px">
+                        <img class="title" src="./assets/g-a.png" width="75px">
                         <br>
-                        <p class="heading" style="margin-top:10px;">Render</p>
+                        <p class="heading" style="margin-top:10px;">Github-Actions</p>
+                        </div>
+                    </div>
+                     <div class="level-item has-text-centered">
+                        <div>
+                        <img class="title" src="./assets/surge.svg" width="75px">
+                        <br>
+                        <p class="heading" style="margin-top:10px;">Surge.sh</p>
                         </div>
                     </div>
             </div>
