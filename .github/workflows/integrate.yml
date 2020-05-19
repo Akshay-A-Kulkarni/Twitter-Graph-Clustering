@@ -1,6 +1,6 @@
-name: HCD Deployment
+name: Deploy HCD Website
 
-on : [push]
+on: [push]
 
 jobs:
   build:
