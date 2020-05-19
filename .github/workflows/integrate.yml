@@ -11,7 +11,7 @@ jobs:
       - uses: actions/setup-node@master
         with:
           node-version: 12
-      - run: npm install -g @vue/cli
-      - run: npm install --global surge
-      - run: npm --prefix /hnc-vue run build
+      - run: sudo npm install -g @vue/cli
+      - run: sudo npm install --global surge
+      - run: sudo npm --prefix /hnc-vue run build --unsafe-perm=true
       - run: surge ./hnc-vue/dist/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
