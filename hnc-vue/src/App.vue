@@ -70,13 +70,23 @@
                                     <br>
                                 </p>
                                 <div class="subtitle is-6">
-                                    <ul>
+                                    <p>
+                            Network graphs ubiquitous and have applications in various spaces such as computer science, social media analysis and even protein and drug interaction analyses. 
+                            The tool uses Graph networks built from scraped hashtags from live tweets with network clustering algorithms and NLP techniques to glean information about discussions surrounding COVID19. 
+                            <br><br>
+                            The tool uses two algorithms namely Clauset-Newman-Moore and Girvan-Newman to conduct the graph-based clustering yielding quite interesting results. Clusters consisting of labels thematically centered 
+                            around medical professionals and appreciation of medical professionals and many other covid related topics can be seen.
+                            <br><br>
+                            With more work, this can become an end-to-end tool to allow users or organizations to extract & analyze information from tweets to learn more about the zeitgeist around areas of their interest.
+
+                                    </p>
+                                    <!-- <ul>
                                         <li>This tool with Python and NetworkX creates graph networks containing Hashtags as nodes which are linked based on co-occurrence of two such #s within a scraped tweet.</li>
                                         <br>
                                         <li>The tool scrapes aforementioned tweets containing the seed hashtag, using a Python package called Tweepy.</li>
                                         <br>
                                         <li>This project is focused on Twitter, but our tool could be adapted to scrape hashtags from many other social networks.</li>
-                                    </ul>
+                                    </ul> -->
                                     <!-- <ul type="circle">
                                         <li>Allows easy access to a few weeks of tweets</li>
                                         <li>Used to set a Minimum of 3 hashtags per tweet in order to facilitate our graph creation heuristic of hashtag co-occurrence.</li>
@@ -96,6 +106,7 @@
                 </div>
             </div>
             <br><br>
+            
             <div class="section has-text-left" id="alg">
                 <h2 class="subtitle is-2">Algorithms</h2><br>
                 <p class="is-strong">The final version of the  tool was fitted with two different algorithms:</p>
@@ -243,7 +254,9 @@
             </div>
         </div>
         </div>
-
+        <br><br>
+        <span class="is-centered is-italic is-family-monospace" style="font-size:0.8rem">Head over to the <a href="https://github.com/Akshay-A-Kulkarni/Twitter-Graph-Clustering">Github Repo</a> to check out all the code of the functionality and components as well as assets such as logos and grpahics that were built from scratch.</span>
+        <br><br>
         <div class="hero-foot">
         <footer class="footer">
          <p class="subtitle is-6">Developed Using:</p>
