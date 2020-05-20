@@ -74,6 +74,7 @@ export function Render3DGraph(elem,l_width){
       .nodeLabel(node => node.id)
       .enableNodeDrag(false)
       .nodeVal(node => Math.pow(node.Degree, 2))
+      .nodeRelSize(6)
       .nodeOpacity(0.9)
       .nodeResolution(16)
       .nodeColor(node => RainBowColor(node.CNM_Label,43))
@@ -84,7 +85,7 @@ export function Render3DGraph(elem,l_width){
       .linkOpacity(0.4)
       .linkWidth(2)
       // .warmupTicks(50)
-      .cameraPosition({ z: 4500 })
+      .cameraPosition({ z: 9000 })
       .linkResolution(6);
   
       return graph

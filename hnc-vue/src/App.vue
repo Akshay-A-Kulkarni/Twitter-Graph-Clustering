@@ -232,15 +232,15 @@
                                         v-model="interCommunityDistance"
                                         @change="updateLinkForce()"
                                         :min="0"
-                                        :max="5000"
+                                        :max="10000"
                                         :interval="1"/>
                                      <br>
                                      <p>Intra Community Distance</p>
                                      <vue-slider 
                                         v-model="intraCommunityDistance"
                                         @change="updateLinkForce()"
-                                        :min="-200"
-                                        :max="1000"
+                                        :min="-100"
+                                        :max="2000"
                                         :interval="1"/>
                                 </div>
                                    
@@ -322,8 +322,8 @@
       },
       data: function () {
             return {
-                intraCommunityDistance : 150,
-                interCommunityDistance : 3000,
+                intraCommunityDistance : 500,
+                interCommunityDistance : 5000,
                 graph_obj : null,
                 linkForce : null
             }
