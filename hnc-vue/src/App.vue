@@ -79,18 +79,6 @@
                                         <br><br>
                                         With more work, this can become an end-to-end tool to allow users or organizations to extract & analyze information from tweets to learn more about the zeitgeist around areas of their interest.
                                     </p>
-                                    <!-- <ul>
-                                        <li>This tool  creates graph networks containing Hashtags as nodes which are linked based on co-occurrence of two such #s within a scraped tweet.</li>
-                                        <br>
-                                        <li>The tool scrapes aforementioned tweets containing the seed hashtag, using a Python package called Tweepy.</li>
-                                        <br>
-                                        <li>This project is focused on Twitter, but our tool could be adapted to scrape hashtags from many other social networks.</li>
-                                    </ul> -->
-                                    <!-- <ul type="circle">
-                                        <li>Allows easy access to a few weeks of tweets</li>
-                                        <li>Used to set a Minimum of 3 hashtags per tweet in order to facilitate our graph creation heuristic of hashtag co-occurrence.</li>
-                                        <li>Removes words synonymous to the seed hashtag eg in case of '#COVID19', all variants of 'Covid' and 'Corona' would be removed as they would be redundant</li>
-                                    </ul> -->
                                 </div>
                               </div>
                             </div>
@@ -162,41 +150,21 @@
                                 </div>  
                             </div>
                         </div>
-                        
-                        <!-- <div class="content is-medium has-text-justified">
-                                <ol>
-                                    <li>The data is fetched from the respective API with the given search parameters </li>
-                                    <li>Then tweepy establishes a stream and maintains the connection while handling connection errors and timeouts.</li>
-                                    <li>The streamed data is filtered based on the restrictions specified and hashtag network generator code processes the tweet to extract and retain info relevant for graph building</li>
-                                    <li>The processed data is stored periodically in Bigquery table for easy and quick access.</li>
-                                    <li>This mined data is then fed to the custom graph generator code which returns a graph object based on the heuristic established before.</li>
-                                    <li>The graph object is then used to compute various attributes and is then fed to community detection algorithm </li>
-                                    <li>Along with the graph data, the community assignments are attached to the graph obj then exported to JSON payload files for visualisation and gets stored remotely</li>
-                                    <li>The JSON is fetched from github into the visualization environment and then processed accordingly to create rich and interactive D3/WebGL renders of a 3D network and displayed to the user for visual analysis and control.</li>
-                                </ol>
-                        </div>
-                         -->
+
                 </div>
             </div>
             <div class="section has-text-left" id="CD">
                 <h2 class="subtitle is-2">Community Detection</h2><br>
+                <p class="title is-4">🦠 - Network </p>
+                <div class="subtitle is-6">
+                    <ul type="circle">
+                     <li>This graph was generated from 10,000+ tweets using #COVID19 as the seed hashtag</li>
+                    </ul>
+                </div>
+                <br>
                 <div class="columns tool-info is-gapless is-vcentered">
-                    <!-- <div class="column is-1" style="width:20vw;">
-                        <div class="card grow">
-                            <div class="card-content">
-                                <p class="title is-4">
-                                    🦠 - Network 
-                                    <br>
-                                </p>
-                                <div class="subtitle is-6">
-                                    <p>This graph was generated from 10,000+ tweets using #COVID19 as the seed hashtag</p>
-                                </div>
-                              </div>
-                            </div>
-                    </div> -->
                     <div class="column is-9 is-vcentered">
                         <div class="container" ref="cd_graph"></div>
-                    <!-- <div ref="controls"></div> -->
                     </div>
                     <div class="column is-4 is-vcentered is-offset-2">
                         <div style="height:100%;">
