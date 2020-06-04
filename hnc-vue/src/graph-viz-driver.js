@@ -1,10 +1,9 @@
 // JS code to create force graphs
 import ForceGraph3D from '3d-force-graph';
-// import dat from 'dat.gui'
 import ForceGraph from 'force-graph';
 
 export function ExampleGraph(el,width){
- // Code to generate random hero graph
+ // Code to generate random twit graph
  const img = new Image();
  img.src = require('./assets/twitter-official.svg')
 
@@ -83,7 +82,6 @@ export function Render3DGraph(elem,l_width){
       .linkColor(link => link.color != 0 ? RainBowColor(link.color,43): 'rgb(169,169,169)')
       .linkOpacity(0.4)
       .linkWidth(2)
-      // .warmupTicks(50)
       .cameraPosition({ z: 9000 })
       .linkResolution(6);
   
