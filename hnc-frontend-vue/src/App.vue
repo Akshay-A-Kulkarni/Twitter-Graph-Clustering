@@ -83,7 +83,10 @@
             </div>
             </div>
             <br><br>
-            <span class="is-centered is-italic is-family-monospace" style="font-size:0.8rem">Head over to the <a href="https://github.com/Akshay-A-Kulkarni/Twitter-Graph-Clustering">Github Repo</a> to check out all the code of the functionality and components as well as assets such as logos and grpahics that were built from scratch.</span>
+            <span class="is-centered is-italic is-family-monospace" style="font-size:0.8rem">
+              Head over to the <a href="https://github.com/Akshay-A-Kulkarni/Twitter-Graph-Clustering">Github Repo</a> 
+              to check out all the code of the functionality and components as well as assets such as logos and graphics that were built from scratch.
+              </span>
             <br><br>
         <div class="hero-foot">
         <footer class="footer">
