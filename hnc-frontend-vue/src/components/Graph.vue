@@ -1,12 +1,16 @@
 <template>
     <div>
         <h2 class="subtitle is-2">Community Detection</h2><br>
-        <p class="title is-4">🦠 - Network </p>
+        <p class="title is-4 is-offset-2">Covid-19 Network 🦠 </p>
         <div class="subtitle is-6">
             <ul type="circle">
-             <li>This graph was generated from 10,000+ tweets using #COVID19 as the seed hashtag</li>
+             <li class="is-family-monospace"><br>This Network graph was generated from 10,000+ tweets using #COVID19 as the seed hashtag</li>
             </ul>
         </div>
+        <br>
+        <p class="is-family-monospace is-italic" style="font-size:0.7rem">
+           ℹ️ Note : If you experience stuttering try enabling Hardware Acceleration in your browser to allow GPU rendering of interactive elements.
+        </p>
         <br>
         <div class="columns tool-info is-gapless is-vcentered">
             <div class="column is-9 is-vcentered">

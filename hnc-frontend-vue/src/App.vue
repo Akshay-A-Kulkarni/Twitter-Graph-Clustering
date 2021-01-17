@@ -48,13 +48,18 @@
                         <br>
                         <br>
                         <div class="has-text-justified float-content">
+                          <br><br>
                             <span class="is-large is-info">
                                 👇 Scroll down to find out more !
                             </span>
                         </div>
                     </div>
                 </div>
-                <br>
+                <br><br><br>
+                <br><br><br>
+                <p class="is-family-monospace" style="font-size:0.7rem">
+                                      ⌘ Note : If you experience stuttering below try enabling Hardware Acceleration in your browser to allow GPU rendering of interactive elements.
+                </p>
                 <br>
                 <br>
                 <div class="section has-text-left" id="intro">
@@ -110,6 +115,13 @@
                         <img class="grayscale" src="./assets/bulma.svg" width="50px">
                         <br>
                         <p class="heading" style="margin-top:10px;">Bulma</p>
+                      </div>
+                    </div>
+                    <div class="level-item has-text-centered grow">
+                      <div>
+                        <img class="grayscale" src="./assets/figma_logo.svg" width="50px">
+                        <br>
+                        <p class="heading" style="margin-top:10px;">Figma</p>
                       </div>
                     </div>
                     <div class="level-item has-text-centered grow">
@@ -215,7 +227,7 @@ body {
 	}
 	50% {
 		/* box-shadow: 0 25px 15px 0px rgba(0,0,0,0.2); */
-		transform: translatey(-20px);
+		transform: translatey(-50px);
 	}
 	100% {
 		/* box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6); */

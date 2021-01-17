@@ -5,13 +5,13 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Deploying to surge
+    name: Deploying to Surge.sh
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
         with:
           node-version: 12
       - run: sudo npm install --global surge
-      - run: sudo npm --prefix ./hnc-vue install
-      - run: sudo npm --prefix ./hnc-vue run build
-      - run: surge ./hnc-vue/dist/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
+      - run: sudo npm --prefix ./hnc-frontend-vue install
+      - run: sudo npm --prefix ./hnc-frontend-vue run build
+      - run: surge ./hnc-frontend-vue/dist/ ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
