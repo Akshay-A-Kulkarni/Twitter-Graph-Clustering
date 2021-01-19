@@ -57,7 +57,7 @@
                              <vue-slider 
                                 v-model="intraCommunityDistance"
                                 @change="updateLinkForce()"
-                                :min="-100"
+                                :min="100"
                                 :max="2000"
                                 :interval="1"/>
                         </div>

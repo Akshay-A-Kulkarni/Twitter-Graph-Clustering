@@ -68,7 +68,7 @@ export function Render3DGraph(elem,l_width){
       .backgroundColor('#F5F5F5')
       .width(l_width*1.3)
       .height(l_width*0.9)
-      .jsonUrl('https://raw.githubusercontent.com/Akshay-A-Kulkarni/Twitter-Graph-Clustering/master/hnc-vue/src/assets/ClausetNewmanMoore.json')
+      .jsonUrl('https://raw.githubusercontent.com/Akshay-A-Kulkarni/Twitter-Graph-Clustering/master/hnc-frontend-vue/src/assets/ClausetNewmanMoore.json')
       .nodeLabel(node => node.id)
       .enableNodeDrag(false)
       .nodeVal(node => Math.pow(node.Degree, 2))
